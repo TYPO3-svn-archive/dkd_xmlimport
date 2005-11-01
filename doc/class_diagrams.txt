@@ -1,0 +1,83 @@
+Revision-Tag:
+$Id$
+
++--------------------------------------------+
+| tx_dkdxml_importer                         |
+|--------------------------------------------|
+| config:Array                               |
+| conf_selected:Array                        |
+| extConf:Array                              |
+| listUploadDir:Array                        |
+| log:Array                                  |
+| logFiles:Array                             |
+| prefixId:String                            |
+| runTimeFactor:Float                        |
+| selections:Array                           |
+| vars:Array                                 |
+|                                            |
+|--------------------------------------------|
+| assocArray2Table:Array                     |
+| backupRecords:bool                         |
+| checkStruktur:bool                         |
+| copy:Integer                               |
+| deleteFileFromUploadDir:void               |
+| fetchData:Array                            |
+| finish:void                                |
+| getConfig:Array                            |
+| getmicrotime:Float                         |
+| getVars:Array                              |
+| init:Integer                               |
+| insertRecords:Integer	                     |
+| listUploadDir:String                       |
+| listFilesFromUploadDir:String              |
+| write2DB:void                              |
+| writeLog:void                              |
+| xml_parse_into_assoc:Array                 |
+|                                            |
+|                                            |
++--------------------------------------------+
+
+--------------------------------------------+
+| tx_dkdxml_impexp                           |
+|--------------------------------------------|
+| config:&Array                              |
+| conf_selected:&Array                       |
+| content:String                             |
+| extConf:Array                              |
+| importer:tx_dkdxml_importer                |
+| log:Array                                  |
+| logFiles:Array                             |
+| pageinfo:Array                             |
+| prefixId:String                            |
+| selections:&Array                          |
+| vars:&Array                                |
+|                                            |
+|--------------------------------------------|
+| backLink:String                            |
+| importXML:String                           |
+| importPics:String                          |
+| init:void                                  |
+| finish:void                                |
+| hiddenField:String                         |
+| listFilesFromUploadDir:String              |
+| main:void                                  |
+| menuConfig:void                            |
+| moduleContent:void                         |
+| printContent:void                          |
+| restoreDBfromFile:String                   |
+| showXMLTable:String                        |
+| stringToOrdList:String                     |
+| viewFile:String                            |
+|                                            |
+|                                            |
++--------------------------------------------+
+
+
+--------------------------------------------+
+| tx_dkdxml_procs                            |
+|--------------------------------------------|
+|--------------------------------------------|
+| process_setTopProduct:void                 |
+|                                            |
+|                                            |
++--------------------------------------------+

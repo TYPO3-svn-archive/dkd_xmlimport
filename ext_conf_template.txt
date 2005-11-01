@@ -1,0 +1,11 @@
+# cat=basic/file; type=string; label=Config File:This file must contain a php array $conf. Path from document_root, if not prepended by "/".
+config_file = typo3conf/ext/dkd_xml/mod1/config.txt
+
+# cat=basic/file; type=string; label=Log File:Import Logs are written to this file. Path from document_root, if not prepended by "/".
+log_file =
+
+# cat=basic/enable; type=boolean; label=Write Backups:Write Backups before doing a new import?
+backup = 1
+
+# cat=basic/file; type=string; label=Backup Path:The Backups are written to subdirectories of this directory. Path from document_root, if not prepended by "/".
+backup_path =
