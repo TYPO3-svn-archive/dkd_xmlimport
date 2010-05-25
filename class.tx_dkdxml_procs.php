@@ -35,7 +35,26 @@
  */
 class tx_dkdxml_procs {
 
-	function process_setTopProduct($config, &$importer) {
+	/**
+	 * Example code for post-processing
+	 * 
+	 * included via PHP config file like:
+	 * 'postProcessing' => array (
+	 *     'function' => array(
+	 *         'tx_dkdxml_procs',
+	 *         'process_setTopProduct'
+	 *     ),
+	 *     'params' => array(
+	 *         '__this::config',
+	 *         '__this'
+	 *     )
+	 * )
+	 * 
+	 * @param	array	$config	configuration array from importer object
+	 * @param	tx_dkdxml_importer	$importer	importer object
+	 * @deprecated	since version 0.6.0
+	 */
+	function process_setTopProduct(array $config, tx_dkdxml_importer $importer) {
 		
 		$tstamps = array();
 		$week = 0;
