@@ -40,11 +40,17 @@ $GLOBALS['LANG']->includeLLFile('EXT:dkd_xmlimport/mod1/locallang.php');
 
 
 class tx_dkdxml_impexp extends t3lib_SCbase {
+
+	/**
+	 * the import "worker"
+	 * @var	tx_dkdxml_importer
+	 */ 
+	protected $importer;
+
 	var $prefixId = 'tx_dkdxml_impexp';				// do it like the FE
 	var $pageinfo = '';
 	var $extConf;				// Extension configuration
 	var $vars;				// PI vars
-	var $importer;				// instance of tx_dkdxml_importer
 	var $content = '';
 	var $log = array ( 'ok' => array(), 'error' => array());				// the default log arrays
 	var $logFiles = array ( 'ok' => 'html', 'error' => 'html');				// the default log arrays
@@ -70,11 +76,10 @@ class tx_dkdxml_impexp extends t3lib_SCbase {
 
 		$this->importer = t3lib_div::makeInstance('tx_dkdxml_importer');
 		$this->importer->init($this->extConf['config_file'], $vars);
-
- 		$this->vars = &$this->importer->vars;
+ 		$this->vars = $this->importer->vars;
  		$this->config = &$this->importer->config;
- 		$this->conf_selected = &$this->importer->conf_selected;
- 		$this->selections = &$this->importer->selections;
+ 		$this->conf_selected = $this->importer->conf_selected;
+ 		$this->selections = $this->importer->selections;
  		
  		$this->importer->log = &$this->log;
  		$this->importer->logFiles = &$this->logFiles;
